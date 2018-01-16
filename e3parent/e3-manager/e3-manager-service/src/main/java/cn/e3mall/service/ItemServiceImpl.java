@@ -1,7 +1,7 @@
 package cn.e3mall.service;
 
 import cn.e3mall.mapper.TbItemMapper;
-import cn.e3mall.model.TbItem;
+import cn.e3mall.pojo.TbItem;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

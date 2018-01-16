@@ -1,4 +1,4 @@
-package cn.e3mall.model;
+package cn.e3mall.pojo;
 
 public class TbOrderItem {
     private String id;
@@ -22,7 +22,7 @@ public class TbOrderItem {
     }
 
     public void setId(String id) {
-        this.id = id;
+        this.id = id == null ? null : id.trim();
     }
 
     public String getItemId() {
@@ -30,7 +30,7 @@ public class TbOrderItem {
     }
 
     public void setItemId(String itemId) {
-        this.itemId = itemId;
+        this.itemId = itemId == null ? null : itemId.trim();
     }
 
     public String getOrderId() {
@@ -38,7 +38,7 @@ public class TbOrderItem {
     }
 
     public void setOrderId(String orderId) {
-        this.orderId = orderId;
+        this.orderId = orderId == null ? null : orderId.trim();
     }
 
     public Integer getNum() {
@@ -54,7 +54,7 @@ public class TbOrderItem {
     }
 
     public void setTitle(String title) {
-        this.title = title;
+        this.title = title == null ? null : title.trim();
     }
 
     public Long getPrice() {
@@ -78,6 +78,6 @@ public class TbOrderItem {
     }
 
     public void setPicPath(String picPath) {
-        this.picPath = picPath;
+        this.picPath = picPath == null ? null : picPath.trim();
     }
 }

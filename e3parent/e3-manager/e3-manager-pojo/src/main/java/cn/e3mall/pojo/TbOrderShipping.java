@@ -1,4 +1,4 @@
-package cn.e3mall.model;
+package cn.e3mall.pojo;
 
 import java.util.Date;
 
@@ -30,7 +30,7 @@ public class TbOrderShipping {
     }
 
     public void setOrderId(String orderId) {
-        this.orderId = orderId;
+        this.orderId = orderId == null ? null : orderId.trim();
     }
 
     public String getReceiverName() {
@@ -38,7 +38,7 @@ public class TbOrderShipping {
     }
 
     public void setReceiverName(String receiverName) {
-        this.receiverName = receiverName;
+        this.receiverName = receiverName == null ? null : receiverName.trim();
     }
 
     public String getReceiverPhone() {
@@ -46,7 +46,7 @@ public class TbOrderShipping {
     }
 
     public void setReceiverPhone(String receiverPhone) {
-        this.receiverPhone = receiverPhone;
+        this.receiverPhone = receiverPhone == null ? null : receiverPhone.trim();
     }
 
     public String getReceiverMobile() {
@@ -54,7 +54,7 @@ public class TbOrderShipping {
     }
 
     public void setReceiverMobile(String receiverMobile) {
-        this.receiverMobile = receiverMobile;
+        this.receiverMobile = receiverMobile == null ? null : receiverMobile.trim();
     }
 
     public String getReceiverState() {
@@ -62,7 +62,7 @@ public class TbOrderShipping {
     }
 
     public void setReceiverState(String receiverState) {
-        this.receiverState = receiverState;
+        this.receiverState = receiverState == null ? null : receiverState.trim();
     }
 
     public String getReceiverCity() {
@@ -70,7 +70,7 @@ public class TbOrderShipping {
     }
 
     public void setReceiverCity(String receiverCity) {
-        this.receiverCity = receiverCity;
+        this.receiverCity = receiverCity == null ? null : receiverCity.trim();
     }
 
     public String getReceiverDistrict() {
@@ -78,7 +78,7 @@ public class TbOrderShipping {
     }
 
     public void setReceiverDistrict(String receiverDistrict) {
-        this.receiverDistrict = receiverDistrict;
+        this.receiverDistrict = receiverDistrict == null ? null : receiverDistrict.trim();
     }
 
     public String getReceiverAddress() {
@@ -86,7 +86,7 @@ public class TbOrderShipping {
     }
 
     public void setReceiverAddress(String receiverAddress) {
-        this.receiverAddress = receiverAddress;
+        this.receiverAddress = receiverAddress == null ? null : receiverAddress.trim();
     }
 
     public String getReceiverZip() {
@@ -94,7 +94,7 @@ public class TbOrderShipping {
     }
 
     public void setReceiverZip(String receiverZip) {
-        this.receiverZip = receiverZip;
+        this.receiverZip = receiverZip == null ? null : receiverZip.trim();
     }
 
     public Date getCreated() {

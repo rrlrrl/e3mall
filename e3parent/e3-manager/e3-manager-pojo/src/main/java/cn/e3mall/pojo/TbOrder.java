@@ -1,4 +1,4 @@
-package cn.e3mall.model;
+package cn.e3mall.pojo;
 
 import java.util.Date;
 
@@ -42,7 +42,7 @@ public class TbOrder {
     }
 
     public void setOrderId(String orderId) {
-        this.orderId = orderId;
+        this.orderId = orderId == null ? null : orderId.trim();
     }
 
     public String getPayment() {
@@ -50,7 +50,7 @@ public class TbOrder {
     }
 
     public void setPayment(String payment) {
-        this.payment = payment;
+        this.payment = payment == null ? null : payment.trim();
     }
 
     public Integer getPaymentType() {
@@ -66,7 +66,7 @@ public class TbOrder {
     }
 
     public void setPostFee(String postFee) {
-        this.postFee = postFee;
+        this.postFee = postFee == null ? null : postFee.trim();
     }
 
     public Integer getStatus() {
@@ -130,7 +130,7 @@ public class TbOrder {
     }
 
     public void setShippingName(String shippingName) {
-        this.shippingName = shippingName;
+        this.shippingName = shippingName == null ? null : shippingName.trim();
     }
 
     public String getShippingCode() {
@@ -138,7 +138,7 @@ public class TbOrder {
     }
 
     public void setShippingCode(String shippingCode) {
-        this.shippingCode = shippingCode;
+        this.shippingCode = shippingCode == null ? null : shippingCode.trim();
     }
 
     public Long getUserId() {
@@ -154,7 +154,7 @@ public class TbOrder {
     }
 
     public void setBuyerMessage(String buyerMessage) {
-        this.buyerMessage = buyerMessage;
+        this.buyerMessage = buyerMessage == null ? null : buyerMessage.trim();
     }
 
     public String getBuyerNick() {
@@ -162,7 +162,7 @@ public class TbOrder {
     }
 
     public void setBuyerNick(String buyerNick) {
-        this.buyerNick = buyerNick;
+        this.buyerNick = buyerNick == null ? null : buyerNick.trim();
     }
 
     public Integer getBuyerRate() {

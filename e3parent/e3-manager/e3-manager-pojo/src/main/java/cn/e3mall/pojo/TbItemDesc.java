@@ -1,4 +1,4 @@
-package cn.e3mall.model;
+package cn.e3mall.pojo;
 
 import java.util.Date;
 
@@ -40,6 +40,6 @@ public class TbItemDesc {
     }
 
     public void setItemDesc(String itemDesc) {
-        this.itemDesc = itemDesc;
+        this.itemDesc = itemDesc == null ? null : itemDesc.trim();
     }
 }

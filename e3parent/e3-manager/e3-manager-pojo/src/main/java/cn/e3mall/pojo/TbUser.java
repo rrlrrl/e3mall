@@ -1,4 +1,4 @@
-package cn.e3mall.model;
+package cn.e3mall.pojo;
 
 import java.util.Date;
 
@@ -30,7 +30,7 @@ public class TbUser {
     }
 
     public void setUsername(String username) {
-        this.username = username;
+        this.username = username == null ? null : username.trim();
     }
 
     public String getPassword() {
@@ -38,7 +38,7 @@ public class TbUser {
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.password = password == null ? null : password.trim();
     }
 
     public String getPhone() {
@@ -46,7 +46,7 @@ public class TbUser {
     }
 
     public void setPhone(String phone) {
-        this.phone = phone;
+        this.phone = phone == null ? null : phone.trim();
     }
 
     public String getEmail() {
@@ -54,7 +54,7 @@ public class TbUser {
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        this.email = email == null ? null : email.trim();
     }
 
     public Date getCreated() {

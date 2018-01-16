@@ -1,4 +1,4 @@
-package cn.e3mall.model;
+package cn.e3mall.pojo;
 
 import java.util.Date;
 
@@ -38,7 +38,7 @@ public class TbItem {
     }
 
     public void setTitle(String title) {
-        this.title = title;
+        this.title = title == null ? null : title.trim();
     }
 
     public String getSellPoint() {
@@ -46,7 +46,7 @@ public class TbItem {
     }
 
     public void setSellPoint(String sellPoint) {
-        this.sellPoint = sellPoint;
+        this.sellPoint = sellPoint == null ? null : sellPoint.trim();
     }
 
     public Long getPrice() {
@@ -70,7 +70,7 @@ public class TbItem {
     }
 
     public void setBarcode(String barcode) {
-        this.barcode = barcode;
+        this.barcode = barcode == null ? null : barcode.trim();
     }
 
     public String getImage() {
@@ -78,7 +78,7 @@ public class TbItem {
     }
 
     public void setImage(String image) {
-        this.image = image;
+        this.image = image == null ? null : image.trim();
     }
 
     public Long getCid() {
