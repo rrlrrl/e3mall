@@ -1,4 +1,4 @@
-package cn.e3mall.service;
+package cn.e3mall.service.impl;
 
 import cn.e3mall.common.pojo.EasyUITreeNode;
 import cn.e3mall.mapper.TbItemCatMapper;
