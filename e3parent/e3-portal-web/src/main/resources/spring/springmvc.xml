@@ -22,6 +22,6 @@
     <!-- 引用dubbo服务 -->
     <dubbo:application name="e3-portal-web"/>
     <dubbo:registry protocol="zookeeper" address="10.71.201.24:2181"/>
-    <!--<dubbo:reference interface="cn.e3mall.service.impl.ItemService" id="itemService"></dubbo:reference>-->
+    <!--<dubbo:reference interface="ItemService" id="itemService"></dubbo:reference>-->
 
 </beans>

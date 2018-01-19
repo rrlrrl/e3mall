@@ -1,7 +1,7 @@
 package cn.e3mall.controller;
 
 import cn.e3mall.common.pojo.EasyUITreeNode;
-import cn.e3mall.service.ItemCatService;
+import cn.e3mall.content.service.ContentCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,21 +11,20 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.List;
 
 /**
- * Created by lenovo on 2018/1/16.
+ * Created by lenovo on 2018/1/19.
  */
 @Controller
-public class ItemCatController {
+public class ContentCategoryController {
 
     @Autowired
-    private ItemCatService itemCatService;
+    private ContentCategoryService contentCategoryService;
 
-    @RequestMapping("/item/cat/list")
+    @RequestMapping("/content/category/list")
     @ResponseBody
-    public List<EasyUITreeNode> getItemCatList(@RequestParam(value="id", defaultValue="0")Long parentId) {
+    public List<EasyUITreeNode> getContentCatList(
+            @RequestParam(value="id", defaultValue="0") Long parentId) {
 
-        List<EasyUITreeNode> list = itemCatService.getItemCatList(parentId);
+        List<EasyUITreeNode> list = contentCategoryService.getContentCatList(parentId);
         return list;
     }
-
-
 }
