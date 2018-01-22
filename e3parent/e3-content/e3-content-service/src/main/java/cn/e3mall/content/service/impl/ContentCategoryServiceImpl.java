@@ -1,6 +1,7 @@
 package cn.e3mall.content.service.impl;
 
 import cn.e3mall.common.pojo.EasyUITreeNode;
+import cn.e3mall.common.utils.E3Result;
 import cn.e3mall.content.service.ContentCategoryService;
 import cn.e3mall.mapper.TbContentCategoryMapper;
 import cn.e3mall.pojo.TbContentCategory;
@@ -9,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -43,5 +45,26 @@ class ContentCategoryServiceImpl implements ContentCategoryService {
         }
         return resultList;
 
+    }
+
+    @Override
+    public E3Result addContentCategory(long parentId, String name) {
+        TbContentCategory tbContentCategory = new TbContentCategory();
+        tbContentCategory.setParentId(parentId);
+        tbContentCategory.setName(name);
+        tbContentCategory.setStatus(1);
+        tbContentCategory.setSortOrder(1);
+        Date date = new Date();
+        tbContentCategory.setCreated(date);
+        tbContentCategory.setUpdated(date);
+        tbContentCategory.setIsParent(false);
+        contentCategoryMapper.insert(tbContentCategory);
+
+        TbContentCategory parent = contentCategoryMapper.selectByPrimaryKey(parentId);
+        if(!parent.getIsParent()){
+            parent.setIsParent(true);
+            contentCategoryMapper.updateByPrimaryKey(parent);
+        }
+        return E3Result.ok(tbContentCategory);
     }
 }
